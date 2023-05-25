@@ -2,7 +2,7 @@ import Versions from './components/Versions'
 import DragDropFile from './components/DragDropFile'
 import { useReducer } from 'react'
 import FileCard from './components/FileCard'
-
+import './App.css'
 interface ImageAction {
   type: string
   payload: Array<ElectronFile>
@@ -25,7 +25,7 @@ function App(): JSX.Element {
     <div className="container">
       <Versions></Versions>
       {state.length === 0 && <DragDropFile dispatch={dispatch} />}
-      <div>
+      <div className="fileCardsParent">
         {state.map((f: ElectronFile, index) => (
           <div key={index}>
             <FileCard file={f} />
