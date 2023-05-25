@@ -3,8 +3,11 @@ import { electronAPI } from '@electron-toolkit/preload'
 
 // Custom APIs for renderer
 const api = {
-  send: (channel: string, ...args): void => ipcRenderer.send(channel, ...args),
-  on: (channel: string, f: CallableFunction): Electron.IpcRenderer => ipcRenderer.on(channel, (event, ...args) => f(...args))
+  send: (channel: string, ...args): void => {
+    ipcRenderer.send(channel, ...args)
+  },
+  on: (channel: string, f: (...args) => void): Electron.IpcRenderer => ipcRenderer.on(channel, (event, ...args) => f(...args)),
+  removeListener: (channel: string, f: (...args) => void): Electron.IpcRenderer => ipcRenderer.removeListener(channel, f)
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to

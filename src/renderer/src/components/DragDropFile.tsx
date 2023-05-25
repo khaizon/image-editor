@@ -2,7 +2,7 @@ import { ChangeEvent, DragEvent, SyntheticEvent, useRef, useState, FunctionCompo
 import './DragDropFile.css'
 
 type Props = {
-  dispatch: Dispatch<{ type: string; payload: Array<File> }>
+  dispatch: Dispatch<{ type: string; payload: Array<ElectronFile> }>
 }
 
 const DragDropFile: FunctionComponent<Props> = ({ dispatch }) => {
@@ -39,6 +39,7 @@ const DragDropFile: FunctionComponent<Props> = ({ dispatch }) => {
     if (e.target.files && e.target.files[0]) {
       // at least one file has been selected so do something
       // handleFiles(e.target.files);
+      console.log(e.target.files[0])
       dispatch({
         type: 'add',
         payload: Array.from(e.target.files)
@@ -47,7 +48,6 @@ const DragDropFile: FunctionComponent<Props> = ({ dispatch }) => {
   }
 
   const onButtonClick = (): void => {
-    console.log('click', inputRef.current)
     inputRef.current?.click()
   }
 

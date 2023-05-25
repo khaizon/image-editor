@@ -5,10 +5,10 @@ import FileCard from './components/FileCard'
 
 interface ImageAction {
   type: string
-  payload: Array<File>
+  payload: Array<ElectronFile>
 }
 
-function imagesReducer(state: Array<File>, action: ImageAction): Array<File> {
+function imagesReducer(state: Array<File>, action: ImageAction): Array<ElectronFile> {
   switch (action.type) {
     case 'add':
       return [...state, ...action.payload]
@@ -21,13 +21,12 @@ function imagesReducer(state: Array<File>, action: ImageAction): Array<File> {
 
 function App(): JSX.Element {
   const [state, dispatch] = useReducer(imagesReducer, [])
-  console.log(state.length)
   return (
     <div className="container">
       <Versions></Versions>
       {state.length === 0 && <DragDropFile dispatch={dispatch} />}
       <div>
-        {state.map((f: File, index) => (
+        {state.map((f: ElectronFile, index) => (
           <div key={index}>
             <FileCard file={f} />
           </div>
