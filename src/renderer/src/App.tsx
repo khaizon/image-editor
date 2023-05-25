@@ -23,7 +23,7 @@ function App(): JSX.Element {
   const [state, dispatch] = useReducer(imagesReducer, [])
   return (
     <div className="container">
-      <Versions></Versions>
+      <div className="title">MAOMAO&apos;s Image Converter</div>
       {state.length === 0 && <DragDropFile dispatch={dispatch} />}
       <div className="fileCardsParent">
         {state.map((f: ElectronFile, index) => (

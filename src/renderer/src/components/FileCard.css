@@ -28,7 +28,7 @@
     overflow: auto
 }
 
-button {
+.copyButton {
     width: 100px;
     height: 40px;
     background-color: #2f3241;
@@ -44,13 +44,13 @@ button {
     fill: #f0f8ff;
 }
 
-button:hover {
+.copyButton:hover {
     background-color: #5f626f;
     box-shadow: 0 0.5em 0.5em -0.4em #2f3241;
     transform: translateY(-0.25em);
 }
 
-button:active {
+.copyButton:active {
     background-color: #a3a5b0;
     box-shadow: 0 0.5em 0.5em -0.4em #121214;
     transform: translateY(4px);
