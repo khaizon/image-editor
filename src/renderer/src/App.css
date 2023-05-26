@@ -1,3 +1,4 @@
+
 .fileCardsParent {
     display: flex;
     flex-direction: column;
@@ -8,4 +9,5 @@
 .title {
     font-size: 3em;
     align-self: center;
+    font-family: 'Reenie Beanie', Roboto;
 }

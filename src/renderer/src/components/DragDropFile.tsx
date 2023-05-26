@@ -39,7 +39,6 @@ const DragDropFile: FunctionComponent<Props> = ({ dispatch }) => {
     if (e.target.files && e.target.files[0]) {
       // at least one file has been selected so do something
       // handleFiles(e.target.files);
-      console.log(e.target.files[0])
       dispatch({
         type: 'add',
         payload: Array.from(e.target.files)
@@ -56,9 +55,9 @@ const DragDropFile: FunctionComponent<Props> = ({ dispatch }) => {
       <input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={handleChange} />
       <label id="label-file-upload" htmlFor="input-file-upload" className={dragActive ? 'drag-active' : ''}>
         <div>
-          <p>Drag and drop your file here or</p>
+          <p>Drag and drop your files here or</p>
           <button className="upload-button" onClick={onButtonClick}>
-            Upload a file
+            Upload files
           </button>
         </div>
       </label>

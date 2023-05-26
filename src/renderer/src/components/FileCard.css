@@ -9,14 +9,17 @@
 
 .fileCardTop {
     display: flex;
-    justify-content: end;
-    gap: 1rem
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .fileAttributes {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: start;
+    overflow: hidden;
+    font-family: 'Roboto Slab';
+    line-height: 2em;
 }
 
 .base64Block {
@@ -25,14 +28,16 @@
     border-radius: 0.5rem;
     overflow-wrap: break-word;
     max-height: 100px;
-    overflow: auto
+    overflow: auto;
+    font-size: 0.7em;
+    font-family: 'Roboto Mono'
 }
 
 .copyButton {
-    width: 100px;
+    min-width: 100px;
     height: 40px;
-    background-color: #2f3241;
-    color: #f0f8ff;
+    background-color: #fff;
+    color: #86a5b1;
     border: none;
     border-radius: 0.3rem;
     transition: 0.25s;
@@ -41,7 +46,9 @@
     align-items: center;
     gap: 0.6rem;
     justify-content: center;
-    fill: #f0f8ff;
+    fill: #86a5b1;
+    font-size: 1.5rem;
+    font-family: 'Reenie Beanie', Roboto;
 }
 
 .copyButton:hover {
@@ -55,3 +62,7 @@
     box-shadow: 0 0.5em 0.5em -0.4em #121214;
     transform: translateY(4px);
   }
+
+img {
+    border-radius: 0.2rem;
+}
