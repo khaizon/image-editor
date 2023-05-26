@@ -52,7 +52,7 @@
 }
 
 .copyButton:hover {
-    background-color: #5f626f;
+    background-color: #e6f2f6;
     box-shadow: 0 0.5em 0.5em -0.4em #2f3241;
     transform: translateY(-0.25em);
 }
@@ -65,4 +65,6 @@
 
 img {
     border-radius: 0.2rem;
+    flex: 0; 
+    max-height: 100px;
 }
