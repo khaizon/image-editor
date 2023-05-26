@@ -1,5 +1,5 @@
 appId: com.electron.imageconverter
-productName: image-converter
+productName: Image Converter
 directories:
   buildResources: build
 files:
