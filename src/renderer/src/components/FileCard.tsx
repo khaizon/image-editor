@@ -10,7 +10,7 @@ function humanFileSize(size: number): string {
 const FileCard: FunctionComponent<{ file: ElectronFile }> = ({ file }) => {
   const [base64, setBase64] = useState('')
 
-  useIpcListener('Image:done', ({ filePath, data }) => {
+  useIpcListener(`Image:done:${file.path}`, ({ filePath, data }) => {
     if (filePath === file.path) {
       setBase64(`data:image/png;base64,${data}`)
     }

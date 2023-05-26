@@ -5,7 +5,7 @@ export async function resize(filePath: string, callback: (res: string) => void):
     .resize(200, 200, { fit: 'cover' })
     .png({
       quality: 100,
-      compressionLevel: 10,
+      compressionLevel: 9,
       effort: 10
     })
     .toBuffer()

@@ -72,5 +72,5 @@ app.on('window-all-closed', () => {
 import { resize } from './image'
 
 ipcMain.on('Image:compress', (event, filePath) => {
-  resize(filePath, (data) => event.sender.send('Image:done', { filePath, data }))
+  resize(filePath, (data) => event.sender.send(`Image:done:${filePath}`, { filePath, data }))
 })

@@ -1,4 +1,3 @@
-import Versions from './components/Versions'
 import DragDropFile from './components/DragDropFile'
 import { useReducer } from 'react'
 import FileCard from './components/FileCard'
